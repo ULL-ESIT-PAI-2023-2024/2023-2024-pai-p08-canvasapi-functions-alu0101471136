@@ -26,7 +26,7 @@
         "test",
         "public",
         "dist",
-        "docs",
+        "WebPage/docs",
         "coverage",
         "app.js",
         "search.js",

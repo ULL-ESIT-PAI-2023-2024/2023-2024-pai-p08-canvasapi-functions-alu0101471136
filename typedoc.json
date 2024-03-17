@@ -1,4 +1,4 @@
 {
-    "entryPoints": ["src/home-work/Shapes/*.ts"],
+    "entryPoints": ["src/home-work/Functions/*.ts"],
     "out": "./docs",
 }
