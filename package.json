@@ -1,5 +1,5 @@
 {
-  "name": "Práctica 8 de PAI",
+  "name": "practica8-pai",
   "version": "1.0.0",
   "description": "Canvas API. Function representation",
   "private": true,
@@ -14,7 +14,7 @@
   "keywords": [
     "PAI"
   ],
-  "author": "F. de Sande <fsande@ull.es>",
+  "author": "Raúl Álvarez Pérez <alu0101471136@ull.edu.es>",
   "license": "MIT",
   "devDependencies": {
     "@exercism/babel-preset-typescript": "^0.1.0",
@@ -30,6 +30,7 @@
     "jest": "^29.4.3",
     "tsc-watch": "^6.0.0",
     "typedoc": "^0.23.25",
+    "express": "^4.18.2",
     "typescript": "^4.9.5"
   }
 }
