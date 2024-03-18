@@ -15,11 +15,14 @@ import { Function } from './Function-interface.js';
  * @class - Class that represents a square root function
  */
 export class SquareRoot implements Function {
- 
+  private functionName: string;
+
   /**
    * @constructor
    */
-  constructor() {}
+  constructor() {
+    this.functionName = 'sqrt';
+  }
 
   /**
    * Method that returns the result of the function
@@ -27,5 +30,13 @@ export class SquareRoot implements Function {
    */
   public evaluate(valueInX: number): number {
     return Math.sqrt(valueInX);
+  }
+
+  /**
+   * Returns the name of the function
+   * @returns - The name of the function
+   */
+  public getName(): string {
+    return this.functionName;
   }
 }

@@ -18,6 +18,7 @@ export class Quadratic implements Function {
   private degreeTwoCoeficent: number;
   private degreeOneCoeficent: number;
   private independentTerm: number;
+  private functionName: string;
 
   /**
    * @constructor
@@ -32,6 +33,7 @@ export class Quadratic implements Function {
     this.degreeTwoCoeficent = degreeTwoCoeficent;
     this.degreeOneCoeficent = degreeOneCoeficent;
     this.independentTerm = independentTerm;
+    this.functionName = 'quadratic';
   }
 
   /**
@@ -41,5 +43,13 @@ export class Quadratic implements Function {
    */
   public evaluate(valueInX: number): number {
     return (this.degreeTwoCoeficent * valueInX * valueInX) + (this.degreeOneCoeficent * valueInX) + this.independentTerm;
+  }
+
+  /**
+   * Returns the name of the function
+   * @returns - The name of the function
+   */
+  public getName(): string {
+    return this.functionName;
   }
 }

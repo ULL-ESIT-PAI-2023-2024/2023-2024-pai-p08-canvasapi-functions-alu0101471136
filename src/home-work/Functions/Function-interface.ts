@@ -19,4 +19,10 @@ export interface Function {
    * @returns - The result of the function
    */
   evaluate(valueInX: number): number;
+
+  /**
+   * Returns the name of the function
+   * @returns - The name of the function
+   */
+  getName(): string;
 }

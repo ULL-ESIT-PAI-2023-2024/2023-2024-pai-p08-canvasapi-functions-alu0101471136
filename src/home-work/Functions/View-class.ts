@@ -17,7 +17,7 @@ import { Function } from './Function-interface.js';
 export class View {
   private canvas: HTMLCanvasElement;
   private context: CanvasRenderingContext2D;
-  private separator: number = 40;
+  private axisSeparation: number = 40;
 
   /**
    * @constructor
@@ -54,9 +54,9 @@ export class View {
     this.context.lineWidth = 0.5;
 
     // Draw vertical grid lines
-    const rangeX = this.canvas.width / 2 / this.separator;
+    const rangeX = this.canvas.width / 2 / this.axisSeparation;
     for (let x = -rangeX; x <= rangeX; x++) {
-      const pixelX = this.canvas.width / 2 + x * this.separator;
+      const pixelX = this.canvas.width / 2 + x * this.axisSeparation;
       this.context.beginPath();
       this.context.moveTo(pixelX, 0);
       this.context.lineTo(pixelX, this.canvas.height);
@@ -67,9 +67,9 @@ export class View {
     }
 
     // Draw horizontal grid lines
-    const rangeY = this.canvas.height / 2 / this.separator;
+    const rangeY = this.canvas.height / 2 / this.axisSeparation;
     for (let y = -rangeY; y <= rangeY; y++) {
-      const pixelY = this.canvas.height / 2 - y * this.separator;
+      const pixelY = this.canvas.height / 2 - y * this.axisSeparation;
       this.context.beginPath();
       this.context.moveTo(0, pixelY);
       this.context.lineTo(this.canvas.width, pixelY);

@@ -17,7 +17,8 @@ import { Function } from './Function-interface.js';
 export class Cosine implements Function {
   private amplitude: number;
   private frequency: number;
-  private phase: number;                
+  private phase: number;  
+  private functionName: string;              
 
   /**
    * @constructor
@@ -30,6 +31,7 @@ export class Cosine implements Function {
     this.amplitude = amplitude; 
     this.frequency = frequency;
     this.phase = phase;
+    this.functionName = 'cos';
   }
 
   /**
@@ -38,5 +40,13 @@ export class Cosine implements Function {
    */
   public evaluate(valueInX: number): number {
     return this.amplitude * Math.cos(this.frequency * valueInX + this.phase);
+  }
+
+  /**
+   * Returns the name of the function
+   * @returns - The name of the function
+   */
+  public getName(): string {
+    return this.functionName;
   }
 }
