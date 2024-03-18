@@ -3,7 +3,7 @@
  * Escuela Superior de Ingeniería y Tecnología
  * Grado en Ingeniería Informática
  * Programación de Aplicaciones Interactivas
- * @fileoverview Axis class file
+ * @fileoverview View class file
  * @author Raúl Álvarez alu0101471136@ull.edu.es
  * @since Mar 17 2024  
  * @see {@link https://google.github.io/styleguide/tsguide.html}
@@ -12,23 +12,29 @@
 import { Function } from './Function-interface.js';
 
 /**
- * @class - Class that represents the axis
+ * @class - Class that represents the View
  */
-export class Axis {
+export class View {
   private canvas: HTMLCanvasElement;
   private context: CanvasRenderingContext2D;
   private separator: number = 40;
 
   /**
    * @constructor
-   * @property canvas - The canvas to draw the axis
+   * @property canvas - The canvas to draw the axis and functions
    * @property context - The context of the canvas
    */
   constructor() {
     this.canvas = document.getElementById('myCanvas') as HTMLCanvasElement;
     this.context = this.canvas.getContext('2d') as CanvasRenderingContext2D;
-    
-    // Draw the axis
+    this.drawAxis();    
+  }
+
+  /**
+   * Method that draws the axis in the canvas
+   * @returns - Void
+   */
+  private drawAxis() {
     this.context.beginPath();
     this.context.moveTo(0, this.canvas.height / 2);
     this.context.lineTo(this.canvas.width, this.canvas.height / 2);
@@ -37,7 +43,7 @@ export class Axis {
     this.context.stroke();
     this.drawGridLines();
   }
-
+  
   /**
    * Method that draws the grid lines
    * @returns - Void

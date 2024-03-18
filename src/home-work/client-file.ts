@@ -15,10 +15,10 @@
 // import { Quadratic } from "./Functions/Quadratic-class.js";
 // import { Exponential } from "./Functions/Exponential-class.js";
 import { SquareRoot } from "./Functions/Square-class.js";
-import { Axis } from "./Functions/Axis-class.js";
+import { View } from "./Functions/View-class.js";
 
 const test = function(): void {
-  const axis = new Axis();
+  const axis = new View();
   // const sinusFunction = new Sinus(2, 5, 0);
   // const cosineFunction = new Cosine(1, 0.1, 0, verticalStart);
   // const quadraticFunction: Quadratic = new Quadratic(1, 6, 8);
