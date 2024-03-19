@@ -10,21 +10,43 @@
  * @see {@link https://google.github.io/styleguide/tsguide.html}
  */
 
-// import { Sinus } from "./Functions/Sinus-class.js";
-// import { Cosine } from "./Functions/Cosine-class.js";
-// import { Quadratic } from "./Functions/Quadratic-class.js";
-// import { Exponential } from "./Functions/Exponential-class.js";
+import { Sinus } from "./Functions/Sinus-class.js";
+import { Cosine } from "./Functions/Cosine-class.js";
+import { Quadratic } from "./Functions/Quadratic-class.js";
+import { Exponential } from "./Functions/Exponential-class.js";
 import { SquareRoot } from "./Functions/Square-class.js";
 import { View } from "./Functions/View-class.js";
 
 const test = function(): void {
   const axis = new View();
-  // const sinusFunction = new Sinus(2, 5, 0);
-  // const cosineFunction = new Cosine(1, 0.1, 0, verticalStart);
-  // const quadraticFunction: Quadratic = new Quadratic(1, 6, 8);
-  // const exponentialFunction: Exponential = new Exponential(verticalStart);
-  const squareRootFunction: SquareRoot = new SquareRoot();
-  axis.drawFunction(squareRootFunction);
+  const functionType: string = 'sinus';
+  switch (functionType) {
+    case 'sinus':
+      const sinusFunction = new Sinus(2, 5, 0);
+      axis.drawFunction(sinusFunction);
+      break;
+    case 'cosine':
+      const cosineFunction = new Cosine(1, 0.1, 0);
+      axis.drawFunction(cosineFunction);
+      break;
+    case 'quadratic':
+      const quadraticFunction = new Quadratic(1, 0, 0);
+      axis.drawFunction(quadraticFunction);
+      break;
+
+    case 'exponential': 
+      const exponentialFunction = new Exponential();
+      axis.drawFunction(exponentialFunction);
+      break;
+
+    case 'squareRoot': 
+      const squareRootFunction = new SquareRoot();
+      axis.drawFunction(squareRootFunction);
+      break;
+
+    default:
+      break;
+  }
 } 
 
 test();
